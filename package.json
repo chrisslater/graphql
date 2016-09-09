@@ -2,10 +2,13 @@
   "name": "ts-react",
   "version": "1.0.0",
   "description": "React project with Typescript",
-  "main": "index.js",
+  "main": "dist/server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "forever start ts-node server/index.ts"
+    "ddev:start": "forever start -a -o out.log -e err.log -c nodemon --delay 1000ms --watch ./dist/server/index.js",
+    "dev:start": "nodemon --watch dist",
+    "dev:stop": "forever stopall",
+    "dev": "npm run dev:stop && npm run dev:start"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +24,7 @@
     "typescript": "^2.0.2"
   },
   "devDependencies": {
+    "nodemon": "^1.10.2",
     "source-map-loader": "^0.1.5",
     "ts-loader": "^0.8.2"
   }

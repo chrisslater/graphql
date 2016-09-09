@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        // "outDir": "./dist/",
+        "outDir": "./dist/",
         "sourceMap": true,
         "noImplicitAny": true,
         "module": "commonjs",
@@ -10,7 +10,7 @@
     "files": [
         "./typings/index.d.ts",
         "./server/index.ts",
-        "./src/modules/welcome/components/Hello.tsx",
-        "./src/index.tsx"
+        "./client/modules/welcome/components/Hello.tsx",
+        "./client/index.tsx"
     ]
 }
