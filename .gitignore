@@ -6,3 +6,5 @@ npm-debug.log
 # logging
 err.log
 out.log
+
+typings

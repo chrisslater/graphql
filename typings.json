@@ -5,5 +5,8 @@
     "koa-router": "registry:dt/koa-router#7.0.0+20160907102352",
     "react": "registry:dt/react#0.14.0+20160829191040",
     "react-dom": "registry:dt/react-dom#0.14.0+20160412154040"
+  },
+  "dependencies": {
+    "graphql": "registry:npm/graphql#0.5.0+20160602041655"
   }
 }
