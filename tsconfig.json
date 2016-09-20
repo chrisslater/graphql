@@ -9,6 +9,7 @@
     },
     "files": [
         "./typings/index.d.ts",
+        "./sdk/index.d.ts",
         "./server/index.ts",
         "./client/modules/welcome/components/Hello.tsx",
         "./client/index.tsx"

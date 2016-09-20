@@ -6,4 +6,5 @@
    * - a relative path to a JSON file
    */
   "extends": "tslint:recommended"
+
 }
