@@ -17,4 +17,6 @@ router.get("/", graphiqlKoa({ endpointURL }));
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-app.listen(8888);
+app.listen(process.env.PORT || 8888);
+
+console.log(process.env.PORT || 8888);
