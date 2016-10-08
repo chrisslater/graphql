@@ -1,6 +1,5 @@
 import user from "./modules/user";
-import sdk from "../sdk";
-const { SDK } = sdk.container;
+import SDK from "../sdk";
 
 const schema = `
     schema {

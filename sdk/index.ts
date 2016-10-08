@@ -29,6 +29,7 @@ interface ISDK {
   // mocks: IMocksService;
   registerProperty(name: string, value: any): void;
   register(obj: ISchemaObj): void;
+  new (...args: any[]): any;
 }
 
 class SDK implements ISDK {
@@ -69,6 +70,10 @@ class SDK implements ISDK {
   }
 }
 
+interface IContainer {
+  SDK: ISDK;
+}
+
 bottle.service("SDK", SDK, "Schema", "Resolvers", "Mocks");
 
-export default bottle;
+export default bottle.container.SDK;

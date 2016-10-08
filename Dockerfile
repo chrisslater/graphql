@@ -1,5 +1,12 @@
 FROM node:latest
+
 ADD . /code
 WORKDIR /code
-EXPOSE 8888
+VOLUME /code
+
+RUN npm install -g typescript
+RUN npm install
+RUN tsc; exit 0
+
+EXPOSE 80
 CMD npm start
