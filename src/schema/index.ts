@@ -1,5 +1,5 @@
-import user from "./modules/user";
-import SDK from "../sdk";
+import user from './modules/user';
+import SDK from '../sdk';
 
 const schema = `
     schema {
@@ -13,13 +13,13 @@ const schema = `
 `;
 
 const mock = {
-    String: () => "It works!",
+    String: () => 'It works!',
 };
 
 const resolver = {
     Root: {
-        testString: () => "W00t",
-        user: () => "yay",
+        testString: () => 'W00t',
+        user: () => 'yay',
     },
 };
 
