@@ -1,3 +1,4 @@
+import 'isomorphic-fetch';
 import * as Koa from 'koa';
 import * as parser from 'koa-bodyparser';
 import * as Router from 'koa-router';

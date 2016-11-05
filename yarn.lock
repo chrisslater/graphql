@@ -268,7 +268,7 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
-bottlejs@^1.4.0:
+bottlejs:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/bottlejs/-/bottlejs-1.5.0.tgz#41b47762d40d4bb2f0aaecfd907f10423a0a0db7"
 
@@ -1022,7 +1022,7 @@ isobject@^2.0.0:
   dependencies:
     isarray "1.0.0"
 
-isomorphic-fetch@^2.1.1:
+isomorphic-fetch, isomorphic-fetch@^2.1.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
   dependencies:

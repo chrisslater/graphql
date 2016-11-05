@@ -1,24 +1,24 @@
-import * as Bottle from "bottlejs";
+import * as Bottle from 'bottlejs';
 
 // Services
-import Schema from "./schema";
-import Resolvers, { IResolversObj } from "./resolvers";
-import Mocks, { IMockObj } from "./mocks";
+import Schema from './schema';
+import Resolvers, { ResolversObj } from './resolvers';
+import Mocks, { IMockObj } from './mocks';
 
-import * as tools from "graphql-tools";
+import * as tools from 'graphql-tools';
 
 const bottle = new Bottle();
 
-bottle.service("Schema", Schema);
-bottle.service("Resolvers", Resolvers);
-bottle.service("Mocks", Mocks);
+bottle.service('Schema', Schema);
+bottle.service('Resolvers', Resolvers);
+bottle.service('Mocks', Mocks);
 
-type SchemaStrings = "schema"|"resolver"|"mock";
-type SchemaValues = string|IResolversObj|IMockObj;
+type SchemaStrings = 'schema'|'resolver'|'mock';
+type SchemaValues = string|ResolversObj|IMockObj;
 
 interface ISchemaObj {
   schema: string;
-  resolver: IResolversObj;
+  resolver: ResolversObj;
   mock?: IMockObj;
   [key: string]: any;
 }
@@ -45,11 +45,11 @@ class SDK implements ISDK {
 
   public registerProperty(name: SchemaStrings, value: SchemaValues): void {
     switch (name) {
-      case "schema":
+      case 'schema':
         return this.schema.register(value);
-      case "resolver":
+      case 'resolver':
         return this.resolvers.register(value);
-      case "mock":
+      case 'mock':
         return this.mocks.register(value);
       default:
     }
@@ -65,7 +65,7 @@ class SDK implements ISDK {
   public create() {
     const schema = this.schema.build();
     tools.addResolveFunctionsToSchema(schema, this.resolvers.build());
-    tools.addMockFunctionsToSchema({ schema, mocks: this.mocks.build() });
+    // tools.addMockFunctionsToSchema({ schema, mocks: this.mocks.build() });
     return schema;
   }
 }
@@ -74,6 +74,6 @@ interface IContainer {
   SDK: ISDK;
 }
 
-bottle.service("SDK", SDK, "Schema", "Resolvers", "Mocks");
+bottle.service('SDK', SDK, 'Schema', 'Resolvers', 'Mocks');
 
 export default bottle.container.SDK;

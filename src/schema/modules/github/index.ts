@@ -1,4 +1,11 @@
 // token: 353dfa652425633fa2451669661a82fd6fec1dc1
+import 'isomorphic-fetch';
+
+class Request {
+  public static async fetch(url: string): Promise<Object> {
+    return await fetch(url);
+  }
+}
 
 interface Mod {
   schema?: string;
@@ -9,22 +16,20 @@ interface Mod {
 const mod: Mod = {};
 
 mod.schema = `
-  type User {
-    name: String
-  }
+  github: String
 `;
 
 mod.resolver = {
-  User: {
-    name: () => 'USER',
+  github: () => {
+    return 'string';
   },
 };
 
-mod.mock = {
-  User: () => ({
-    age: () => '29',
-    name: 'Chris',
-  }),
-};
+// mod.mock = {
+//   // User: () => ({
+//   //   age: () => '29',
+//   //   name: 'Chris',
+//   // }),
+// };
 
 export default mod;
