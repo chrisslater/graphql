@@ -1,9 +1,6 @@
-export interface IService {
-  register(value: any): void;
-}
-
-abstract class Service implements IService {
+export abstract class Service {
   protected values: Array<any> = [];
+
   public register(value: any): void {
     this.values.push(value);
   }

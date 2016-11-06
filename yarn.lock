@@ -45,6 +45,10 @@
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/fibers/-/fibers-0.0.29.tgz#4c815209a717ede505c3040b4e3a31a7f5239d49"
 
+"@types/graphql":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.7.2.tgz#3289bd22cc746196d0a838783374f6955eb47bc0"
+
 "@types/hapi@^13.0.35":
   version "13.0.37"
   resolved "https://registry.yarnpkg.com/@types/hapi/-/hapi-13.0.37.tgz#596c4ec52015daa16d36fd75ddbcfac3a5effc30"
@@ -55,24 +59,24 @@
   version "1.5.30"
   resolved "https://registry.yarnpkg.com/@types/http-errors/-/http-errors-1.5.30.tgz#69067a5255bf1217eeeab715b942d1ab51e4c619"
 
-"@types/koa-bodyparser@^3.0.19":
-  version "3.0.20"
-  resolved "https://registry.yarnpkg.com/@types/koa-bodyparser/-/koa-bodyparser-3.0.20.tgz#5b6b8127b7bb30428020470abe5d370beb680465"
-  dependencies:
-    "@types/koa" "*"
-
-"@types/koa-router@^7.0.21":
-  version "7.0.21"
-  resolved "https://registry.yarnpkg.com/@types/koa-router/-/koa-router-7.0.21.tgz#8d462a631181022472e6a9a690934bbaa9a3e7a5"
-  dependencies:
-    "@types/koa" "*"
-
-"@types/koa@*", "@types/koa@^2.0.33":
+"@types/koa", "@types/koa@*", "@types/koa@^2.0.33":
   version "2.0.33"
   resolved "https://registry.yarnpkg.com/@types/koa/-/koa-2.0.33.tgz#e383d3dd311b6389eaa6212e1b2efc144f3af35e"
   dependencies:
     "@types/cookies" "*"
     "@types/node" "*"
+
+"@types/koa-bodyparser", "@types/koa-bodyparser@^3.0.19":
+  version "3.0.20"
+  resolved "https://registry.yarnpkg.com/@types/koa-bodyparser/-/koa-bodyparser-3.0.20.tgz#5b6b8127b7bb30428020470abe5d370beb680465"
+  dependencies:
+    "@types/koa" "*"
+
+"@types/koa-router", "@types/koa-router@^7.0.21":
+  version "7.0.21"
+  resolved "https://registry.yarnpkg.com/@types/koa-router/-/koa-router-7.0.21.tgz#8d462a631181022472e6a9a690934bbaa9a3e7a5"
+  dependencies:
+    "@types/koa" "*"
 
 "@types/mime@*", "@types/mime@0.0.29":
   version "0.0.29"
@@ -84,9 +88,19 @@
   dependencies:
     "@types/express" "*"
 
-"@types/node@*", "@types/node@^6.0.41":
+"@types/node", "@types/node@*", "@types/node@^6.0.41":
   version "6.0.46"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.46.tgz#8d9e48572831f05b11cc4c793754d43437219d62"
+
+"@types/react", "@types/react@*":
+  version "0.14.44"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-0.14.44.tgz#033f0b63691b489adfce2397c93d8bcafe7f7356"
+
+"@types/react-dom":
+  version "0.14.18"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-0.14.18.tgz#af4fb4092f433667f5f094e762b32c294e0010dc"
+  dependencies:
+    "@types/react" "*"
 
 "@types/serve-static@*", "@types/serve-static@^1.7.31":
   version "1.7.31"
@@ -267,10 +281,6 @@ boom@2.x.x:
   resolved "https://registry.yarnpkg.com/boom/-/boom-2.10.1.tgz#39c8918ceff5799f83f9492a848f625add0c766f"
   dependencies:
     hoek "2.x.x"
-
-bottlejs:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/bottlejs/-/bottlejs-1.5.0.tgz#41b47762d40d4bb2f0aaecfd907f10423a0a0db7"
 
 brace-expansion@^1.0.0:
   version "1.1.6"
@@ -907,6 +917,10 @@ ini@~1.3.0:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.4.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
 
+inversify:
+  version "3.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/inversify/-/inversify-3.0.0-beta.1.tgz#15e2849336f3c6cb38b931440642d2bb7c87a8c6"
+
 is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-arrayish/-/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
@@ -1426,10 +1440,6 @@ oauth-sign@~0.8.1:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
 
-object-assign@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-2.1.1.tgz#43c36e5d569ff8e4816c4efa8be02d26967c18aa"
-
 object-assign@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-3.0.0.tgz#9bedd5ca0897949bca47e7ff408062d549f587f2"
@@ -1644,6 +1654,10 @@ readdirp@^2.0.0:
     minimatch "^3.0.2"
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
+
+reflect-metadata:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.8.tgz#72426d570b60776e3688968bd5ab9537a15cecf6"
 
 regex-cache@^0.4.2:
   version "0.4.3"
@@ -1911,15 +1925,15 @@ tough-cookie@~2.3.0:
   dependencies:
     punycode "^1.4.1"
 
-ts-loader@^0.8.2:
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-0.8.2.tgz#7331296d13d5b3105cd905cebca39143eed2b255"
+ts-loader:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-1.0.0.tgz#0fbefb6ca9460e3d5398f7f9f96f4c67c3c7ce64"
   dependencies:
     arrify "^1.0.0"
     colors "^1.0.3"
     enhanced-resolve "^0.9.0"
     loader-utils "^0.2.6"
-    object-assign "^2.0.0"
+    object-assign "^4.1.0"
     semver "^5.0.1"
 
 ts-node@^1.6.0:
