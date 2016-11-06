@@ -1,8 +1,9 @@
 import { GraphQLSchema } from 'graphql';
 import { buildSchemaFromTypeDefinitions } from 'graphql-tools';
 import { Service } from './Service';
+import { ISchemaService } from '../typings';
+
 import { injectable } from 'inversify';
-import { ISchemaService } from '../types';
 import 'reflect-metadata';
 
 @injectable()

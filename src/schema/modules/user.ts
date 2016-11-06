@@ -1,4 +1,4 @@
-import { SchemaModule } from '../../../graphql-schema-builder';
+import { SchemaModule } from '../../graphql-schema-builder';
 
 const schema = `
   type User {

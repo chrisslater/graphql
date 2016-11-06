@@ -1,3 +1,7 @@
+import { injectable } from 'inversify';
+import 'reflect-metadata';
+
+@injectable()
 export abstract class Service {
   protected values: any[] = [];
   public abstract build(): any;

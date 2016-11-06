@@ -1,9 +1,10 @@
 import { GraphQLSchema } from 'graphql';
 
-type ResolveFn = () => any;
+type ResolveFn = (root: string, args: Object) => any;
 type Resolver = { [key: string]: ResolveFn };
+type ResolverUnion = ResolveFn|Resolver;
 export interface ResolverStore {
-  [key: string]: Resolver;
+  [key: string]: ResolverUnion;
 }
 
 type MockFn = () => any;
