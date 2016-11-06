@@ -1,12 +1,11 @@
 import { injectable } from 'inversify';
 import 'reflect-metadata';
 import { Service } from './Service';
-import { ResolverCollection, IResolverService } from '../types';
+import { ResolverStore, IResolverService } from '../typings';
 
 @injectable()
 export class ResolverService extends Service implements IResolverService {
-  public build(): ResolverCollection {
-    const values: ResolverCollection[] = this.values;
-    return Object.assign({}, ...values);
+  public build(): ResolverStore {
+    return Object.assign({}, ...this.values);
   }
 }

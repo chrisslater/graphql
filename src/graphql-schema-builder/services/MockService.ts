@@ -1,12 +1,11 @@
 import { injectable } from 'inversify';
 import 'reflect-metadata';
 import { Service } from './Service';
-import { IMockService, MockCollection } from '../types';
+import { MockStore, IMockService } from '../typings';
 
 @injectable()
 export class MockService extends Service implements IMockService {
-  public build(): MockCollection {
-    const values: MockCollection[] = this.values;
-    return Object.assign({}, ...values);
+  public build(): MockStore {
+    return Object.assign({}, ...this.values);
   }
 }

@@ -1,28 +1,23 @@
-interface IMod {
-  schema?: string;
-  resolver?: Object;
-  mock?: Object;
-}
+import { SchemaModule } from '../../../graphql-schema-builder';
 
-const mod: IMod = {};
-
-mod.schema = `
+const schema = `
   type User {
     name: String
   }
 `;
 
-mod.resolver = {
+const resolver = {
   User: {
-    name: () => "USER",
+    name: () => 'USER',
   },
 };
 
-mod.mock = {
+const mock = {
   User: () => ({
-    age: () => "29",
-    name: "Chris",
+    age: () => '29',
+    name: 'Chris',
   }),
 };
 
+export const mod: SchemaModule = { schema, resolver, mock };
 export default mod;

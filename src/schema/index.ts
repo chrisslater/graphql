@@ -1,6 +1,6 @@
 import github from './modules/github';
 import user from './modules/user';
-import SDK from '../sdk';
+import { SchemaBuilder } from '../graphql-schema-builder';
 
 import 'isomorphic-fetch';
 
@@ -80,7 +80,7 @@ const root = {
 };
 
 // SDK.register(github);
-SDK.register(user);
-SDK.register(root);
+SchemaBuilder.register(user);
+SchemaBuilder.register(root);
 
-export default SDK.create();
+export default SchemaBuilder.create();

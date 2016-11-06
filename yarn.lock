@@ -777,6 +777,14 @@ graceful-fs@^4.1.2:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
+graphql-server:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/graphql-server/-/graphql-server-0.3.2.tgz#ac3299963221be784fc78a22784d2d9ab7116e5e"
+  dependencies:
+    boom "^4.0.0"
+    http-errors "^1.5.0"
+    source-map-support "^0.4.2"
+
 graphql-tools@^0.6.6:
   version "0.6.6"
   resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-0.6.6.tgz#a1cacae206f8c10b860dc345d130898568e4d0dc"
