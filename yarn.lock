@@ -45,10 +45,6 @@
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/fibers/-/fibers-0.0.29.tgz#4c815209a717ede505c3040b4e3a31a7f5239d49"
 
-"@types/graphql":
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/@types/graphql/-/graphql-0.7.2.tgz#3289bd22cc746196d0a838783374f6955eb47bc0"
-
 "@types/hapi@^13.0.35":
   version "13.0.37"
   resolved "https://registry.yarnpkg.com/@types/hapi/-/hapi-13.0.37.tgz#596c4ec52015daa16d36fd75ddbcfac3a5effc30"
@@ -485,6 +481,10 @@ depd@^1.1.0, depd@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.0.tgz#e1bd82c6aab6ced965b97b88b17ed3e528ca18c3"
 
+deprecated-decorator@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/deprecated-decorator/-/deprecated-decorator-0.1.6.tgz#00966317b7a12fe92f3cc831f7583af329b86c37"
+
 destroy@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
@@ -777,6 +777,12 @@ graceful-fs@^4.1.2:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
+graphql:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.7.2.tgz#cc894a32823399b8a0cb012b9e9ecad35cd00f72"
+  dependencies:
+    iterall "1.0.2"
+
 graphql-server:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/graphql-server/-/graphql-server-0.3.2.tgz#ac3299963221be784fc78a22784d2d9ab7116e5e"
@@ -785,22 +791,19 @@ graphql-server:
     http-errors "^1.5.0"
     source-map-support "^0.4.2"
 
-graphql-tools@^0.6.6:
-  version "0.6.6"
-  resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-0.6.6.tgz#a1cacae206f8c10b860dc345d130898568e4d0dc"
+graphql-tools:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-0.8.0.tgz#5708257a398f9a3ff6f9d6e362aac184cd4323a0"
   dependencies:
-    lodash.uniq "^4.3.0"
+    deprecated-decorator "^0.1.6"
+    lodash "^4.3.0"
     node-uuid "^1.4.7"
+  optionalDependencies:
+    typed-graphql "^1.0.2"
 
 graphql-typings@0.0.1-beta-2:
   version "0.0.1-beta-2"
   resolved "https://registry.yarnpkg.com/graphql-typings/-/graphql-typings-0.0.1-beta-2.tgz#b53e6b92372e6e4d1bb4e9cc79f8a5bb7ec53f25"
-
-graphql@^0.7.0:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/graphql/-/graphql-0.7.2.tgz#cc894a32823399b8a0cb012b9e9ecad35cd00f72"
-  dependencies:
-    iterall "1.0.2"
 
 har-validator@~2.0.6:
   version "2.0.6"
@@ -1259,11 +1262,7 @@ lodash.restparam@^3.0.0:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
 
-lodash.uniq@^4.3.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
-
-lodash@^4.5.1:
+lodash@^4.3.0, lodash@^4.5.1:
   version "4.16.6"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.16.6.tgz#d22c9ac660288f3843e16ba7d2b5d06cca27d777"
 

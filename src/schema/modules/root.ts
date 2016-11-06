@@ -1,5 +1,5 @@
 import 'isomorphic-fetch';
-import { SchemaModule } from '../../graphql-schema-builder';
+import { SchemaModule } from 'graphql-schema-builder';
 
 type GithubUser = {
   login: string;
@@ -43,7 +43,6 @@ const schema = `
 
   type Query {
     testString: String
-    user: User
     github(username: String): Github
   }
 
